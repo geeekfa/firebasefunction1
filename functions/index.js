@@ -42,8 +42,8 @@ exports.students = functions.https.onRequest((request, response) => {
 });
 
 // Special Students
-exports.studentMajidi = functions.https.onRequest((request, response) => {
-    fireStore.collection('student').where('family', '==', 'majidi').get()
+exports.studentAhmadi = functions.https.onRequest((request, response) => {
+    fireStore.collection('student').where('family', '==', 'ahmadi').get()
         .then(sns => {
             var json1 = [];
             sns.docs.forEach(doc => {
